@@ -1,0 +1,84 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: #2a6496;
+    text-decoration: underline;
+}
+a:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+
+.nav {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    float: left;
+}
+.nav > li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 10px;
+    background-color: #e8e8ff;
+
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.navbar-fixed {
+    z-index: 1000;
+    position: fixed;
+    height: 40px;
+    left: 0;
+    right: 0;
+}
+
+.navbar-top {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar-top .navbar-header {
+    font-size: 18px;
+    padding: 8px 20px;
+    float: left;
+}
+
+.navbar-top .nav > li {
+    border-radius: 0 0 5px 5px;
+}
+
+.navbar-bottom {
+    bottom: 0;
+}
+
+.navbar-bottom .nav > li {
+    border-radius: 5px 5px 0 0;
+}

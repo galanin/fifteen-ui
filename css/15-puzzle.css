@@ -1,0 +1,135 @@
+.fifteen-puzzle {
+    margin: 100px 30% 0 20%;
+    border: 1px solid #d0d0d0;
+    padding: 1px 2px 2px 1px;
+    position: relative;
+}
+
+.fifteen-puzzle .board {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fifteen-puzzle .board .tile {
+    position: absolute;
+    color: #808080;
+    background-color: #f0f0f0;
+    border: 6px solid #ececec;
+    border-radius: 7px;
+    text-align: center;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fifteen-puzzle .board.show-tips .tile.good-turn {
+    background-color: #e8ffe8;
+}
+
+.fifteen-puzzle .board .tile.sliding:hover {
+    background-color: #ffffff;
+    cursor: move;
+}
+
+.fifteen-puzzle .board .tile .prio {
+    display: none;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    height: 10px;
+    width: 30px;
+    font-size: 9px;
+    color: #808080;
+    line-height: 9px;
+}
+
+.fifteen-puzzle .board .tile.sliding .prio {
+    /*display: block;*/
+}
+
+.fifteen-puzzle .panel {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.fifteen-puzzle .panel .ui-widget {
+    margin: 0 auto 20px auto;
+}
+
+.fifteen-puzzle .panel .btn {
+    display: block;
+}
+
+.fifteen-puzzle.solving .panel .btn.solve {
+    display: none;
+}
+
+.fifteen-puzzle .panel .btn.stop-solving {
+    display: none;
+}
+
+.fifteen-puzzle.solving .panel .btn.stop-solving {
+    display: block;
+}
+
+.fifteen-puzzle .panel .center {
+    text-align: center;
+}
+
+.fifteen-puzzle .panel .info {
+    margin: 0 auto 20px auto;
+}
+
+.fifteen-puzzle .panel .info .value {
+    width: 100px;
+    margin: 5px auto 0;
+    border: 1px solid #d0d0d0;
+    padding: 3px;
+}
+
+.fifteen-puzzle .panel .info.yes .yes {
+    display: block;
+}
+
+.fifteen-puzzle .panel .info.yes .no {
+    display: none;
+}
+
+.fifteen-puzzle .panel .info .yes {
+    color: #008000;
+    display: none;
+}
+
+.fifteen-puzzle .panel .info .no {
+    color: #800000;
+    display: block;
+}
+
+.fifteen-puzzle .panel .info.solubility {
+    font-weight: bold;
+}
+
+.fifteen-puzzle.initial .panel .info.solved {
+    display: none;
+}
+
+.fifteen-puzzle .panel .info.solved > * {
+    display: none;
+}
+
+.fifteen-puzzle.solved .panel .info.solved > .yes {
+    display: block;
+}
+
+.fifteen-puzzle.not-solved .panel .info.solved > .no {
+    display: block;
+}
