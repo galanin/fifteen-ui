@@ -151,8 +151,6 @@
         },
 
         _changeSolvingState: function (newState) {
-            console.log("newState", newState);
-            console.trace();
             var self = this;
             if (newState === SOLVING.RUNNING) {
                 self.solving = SOLVING.RUNNING;
@@ -205,7 +203,6 @@
             self._cleanupTileStyles();
             ++self.turns;
             self._refreshGameInfo();
-            console.log(self.solving);
             if (self.solving !== SOLVING.RUNNING) {
                 // human's turn
                 self.tiles[n].animate({
@@ -281,7 +278,6 @@
             var position = self.game.getPositionArray();
             var href = document.location.toString().split('?', 2)[0] +
                 '?' + self.game.getWidth() + 'x' + self.game.getHeight() + ':' + position.join(',');
-            console.log(href);
             self.$permalink.attr('href', href);
         },
 
