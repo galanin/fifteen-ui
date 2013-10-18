@@ -216,7 +216,7 @@
                 self._createPermalink();
             }
             else {
-                // human's turn, skip animation of moving
+                // machine's turn, skip animation of moving
                 self.tiles[n]
                     .css('left', self._getX(x) + 'px')
                     .css('top', self._getY(y) + 'px');
